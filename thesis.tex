@@ -1,0 +1,143 @@
+\documentclass[12pt, letterpaper, twoside, openright]{report}
+\usepackage[letterpaper,
+            twoside,
+            top=3.8cm,
+            bottom=2.5cm,
+            inner=3.8cm,
+            outer=3.8cm]{geometry}
+\usepackage[english,canadian]{babel}
+\usepackage[parfill]{parskip}  
+\usepackage{graphicx}
+\usepackage{amssymb, amsmath}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=black, 
+            citecolor=black, urlcolor=black]{hyperref}
+\usepackage[round]{natbib}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{nomencl}
+
+\linespread{1.5}
+
+% --------------------- Title and Author --------------------------------------
+\title{Thesis}
+\author{Author Authorson}
+\date{\today}
+
+\renewcommand{\nomname}{List of Abbreviations and Symbols}
+\renewcommand{\nomlabel}[1]{\textbf{#1}}
+\makenomenclature
+
+% --------------------- Begin Document-----------------------------------------
+
+\begin{document}
+
+% --------------------- Half-title Page : MAC REQUIREMENT ---------------------
+
+\begin{titlepage}
+    \thispagestyle{empty}
+    \topskip0pt
+    \vspace*{\fill}
+    \begin{center}{\Large
+    \uppercase{Thesis}}
+    \end{center}
+    \vspace*{\fill}
+    \setcounter{page}{0}
+\end{titlepage}
+
+% --------------------- Title Page : MAC REQUIREMENT --------------------------
+
+\begin{titlepage}
+    \thispagestyle{empty}
+    \pagenumbering{roman}
+    \vspace*{\fill}
+    \begin{center}{\Large
+    \uppercase{Thesis}\\
+    \vfill
+    by AUTHOR A. AUTHORSON}\\
+    \vfill
+    {\normalsize A Thesis Submitted to the School of Graduate Studies in Partial Fulfilment of the Requirements for the Degree Master of Science}\\
+    \vfill
+    {\normalsize McMaster University \textcopyright{} Copyright by Author A. Authorson, Smarch 1999}
+    \end{center}
+    %\vspace*{\fill} 
+\end{titlepage}
+
+% --------------------- Descriptive Note : MAC REQUIREMENT --------------------
+
+{\noindent McMaster University MASTER OF SCIENCE (2014) Hamilton, Ontario (Physics)\\
+TITLE: Thesis\\
+AUTHOR: Author A. Authorson, B.Sc. (Some Ivy League University)\\
+SUPERVISOR: Dr. Astro A McNutpants\\
+NUMBER OF PAGES: ix,~\pageref{LastPage}}
+
+% --------------------- Abstract : MAC REQUIREMENT ----------------------------
+
+\begin{abstract}
+    \thispagestyle{plain}
+    \setcounter{page}{3}
+    This is my work, it's spotty and ultimately inconclusive.
+\end{abstract}
+
+% --------------------- Acknowledgements : MAC REQUIREMENT --------------------
+
+\renewcommand{\abstractname}{Acknowledgements}
+\begin{abstract}
+    \thispagestyle{plain}
+    \setcounter{page}{4}
+    I would like to thank Mr. T., Ice T., and iced tea.
+\end{abstract}
+
+% --------------------- Contents and Lists : MAC REQUIREMENT ------------------
+
+\tableofcontents
+\listoffigures
+\listoftables
+\printnomenclature
+
+% --------------------- Declaration : MAC REQUIREMENT -------------------------
+
+\renewcommand{\abstractname}{Declaration of Academic Achievement}
+\begin{abstract}
+    \thispagestyle{plain}
+    \setcounter{page}{12}
+    I done good.
+\end{abstract}
+
+% ===================== Body of Thesis ========================================
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[LE,LO]{M.Sc. Thesis - Author A. Authorson}
+\fancyhead[RE,RO]{McMaster University - Physics}
+\fancyfoot[CE,CO]{\thepage}
+
+% --------------------- Chapter 1 ---------------------------------------------
+
+\chapter{Introduction}
+
+% --------------------- Chapter 2 ---------------------------------------------
+
+\chapter{Data}
+\input{data}
+
+% --------------------- Chapter 3 ---------------------------------------------
+
+% --------------------- Chapter 4 ---------------------------------------------
+
+%...etc.
+
+% --------------------- Bibliography ------------------------------------------
+
+\bibliographystyle{plainnat}
+\bibliography{library}
+
+% ===================== End of Thesis =========================================
+
+\end{document}
+\end
+
+
