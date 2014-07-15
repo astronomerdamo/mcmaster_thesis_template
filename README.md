@@ -16,4 +16,4 @@ Change up the bash script as needed, alter anything you want to make it your own
 $ git clone https://github.com/astronomerdamo/mcmaster_thesis_template.git
 `
 
-So this doesn't install anything, just copies the latex files and folder to your machine.
+So this doesn't install anything, just copies the latex files to your machine.
